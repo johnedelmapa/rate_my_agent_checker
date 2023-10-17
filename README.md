@@ -22,7 +22,7 @@ Chrome Browser: The script uses Chrome for web automation, so ensure you have Go
 ## Setup
 Clone the Repository:
 ```bash
-git clone https://github.com/yourusername/rate-my-agent-checker.git
+git clone https://github.com/johnedelmapa/rate-my-agent-checker.git
 cd rate-my-agent-checker
 
 
