@@ -17,18 +17,20 @@ Before running the script, make sure you have the following prerequisites instal
 
 Chrome Browser: The script uses Chrome for web automation, so ensure you have Google Chrome installed.
 
-Setup
+## Setup
 Clone the Repository:
-git clone https://github.com/yourusername/rate-my-agent-checker.git
-cd rate-my-agent-checker
+  ```bash
+  git clone https://github.com/yourusername/rate-my-agent-checker.git
+  cd rate-my-agent-checker
 
-Local Testing
+## Local Testing
 You can test the script locally to ensure it's working correctly without sending actual emails.
 
 In the terminal, navigate to the directory where rate_my_agent_checker.rb is located:
 
-cd /path/to/rate-my-agent-checker
-Run the script:
+  ```bash
+  cd /path/to/rate-my-agent-checker
+  Run the script:
 
 ruby rate_my_agent_checker.rb
 The script will run and periodically check the website. When it detects an issue, it will log the error message to the console.
