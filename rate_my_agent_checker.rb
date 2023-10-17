@@ -19,8 +19,6 @@ logger = Logger.new(log_file)
 def check_website(driver, url)
   begin
     driver.get(url)
-    # Add your specific checks here, for example, checking for a certain element or text
-
     # Example: Check if the title contains "Rate My Agent"
     if driver.title.include?('Rate My Agent')
       return true
@@ -33,12 +31,33 @@ def check_website(driver, url)
   end
 end
 
-# Function to send an email notification
+# Function to send an email notification using locally
 def send_email(subject, body)
     puts "Email would be sent with subject: #{subject}"
     puts "Email body:"
     puts body
 end
+
+# Function to send an email notification using smtp
+# def send_email(subject, body)
+#   smtp_server = 'smtp.your-email-provider.com'
+#   smtp_port = 587
+#   smtp_domain = 'your-domain.com'
+#   smtp_username = 'your-username'
+#   smtp_password = 'your-password'
+
+#   message = <<MESSAGE_END
+# From: Rate My Agent Checker <your-email@your-domain.com>
+# To: alerts@rate-my-agent.com
+# Subject: #{subject}
+
+# #{body}
+# MESSAGE_END
+
+#   Net::SMTP.start(smtp_server, smtp_port, smtp_domain, smtp_username, smtp_password, :login) do |smtp|
+#     smtp.send_message message, 'your-email@your-domain.com', 'alerts@rate-my-agent.com'
+#   end
+# end
   
 # Function to run the website check
 def run_website_check(driver, url, logger)
