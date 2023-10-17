@@ -22,30 +22,3 @@ Clone the Repository:
   ```bash
   git clone https://github.com/yourusername/rate-my-agent-checker.git
   cd rate-my-agent-checker
-
-## Local Testing
-You can test the script locally to ensure it's working correctly without sending actual emails.
-
-In the terminal, navigate to the directory where rate_my_agent_checker.rb is located:
-
-  ```bash
-  cd /path/to/rate-my-agent-checker
-  Run the script:
-
-ruby rate_my_agent_checker.rb
-The script will run and periodically check the website. When it detects an issue, it will log the error message to the console.
-
-Cron Job
-To schedule the script to run periodically (e.g., every 3 minutes), you can create a cron job. Open your crontab file for editing with the following command:
-
-
-crontab -e
-Add a line to schedule the script:
-
-*/3 * * * * /usr/bin/ruby /path/to/rate_my_agent_checker.rb
-Replace /usr/bin/ruby with the path to your Ruby interpreter and /path/to/rate_my_agent_checker.rb with the actual path to your script file.
-
-Save the crontab and exit the editor to set up the cron job.
-
-Customizing Email (Optional)
-If you want to enable email notifications, you need to configure the send_email function in the script with your SMTP server settings. This function is currently set to print messages to the console for local testing.
